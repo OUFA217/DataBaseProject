@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:studentsystem/pages/dashboard.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:studentsystem/Observer/BlocObserver.dart';
+import 'package:studentsystem/Presentation/Sign%20In/SignIn.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Bloc.observer = MyBlocObserver();
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(
-        statusBarColor: Color(0XFF584BDD),
-      ),
-    );
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'STUDENT SYSTEM',
       theme: ThemeData(
         primarySwatch: Colors.purple,
-        primaryColor: Color(0XFF584BDD),
-        hintColor: Color(0XFFFBF6FF),
+        primaryColor: const Color(0XFF584BDD),
+        hintColor: const Color(0XFFFBF6FF),
       ),
-      home: Dashboard(),
+      home: SignIn(),
     );
   }
 }

@@ -5,10 +5,10 @@ class Finance {
   final String paymentDate;
 
   Finance({
-    required this.paymentId,
-    required this.fType,
-    required this.amountPaid,
-    required this.paymentDate,
+    this.paymentId = 1,
+    this.fType = "Credit Card",
+    this.amountPaid = 1,
+    this.paymentDate = "27/5",
   });
 
   Map<String, dynamic> toMap() {

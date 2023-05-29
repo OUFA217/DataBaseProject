@@ -4,9 +4,9 @@ class Enrollment {
   final String courseId;
 
   Enrollment({
-    required this.enrollmentId,
-    required this.studentId,
-    required this.courseId,
+    this.enrollmentId = 1,
+    this.studentId = 1,
+    this.courseId = "CSCI305",
   });
 
   Map<String, dynamic> toMap() {

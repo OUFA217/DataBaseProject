@@ -5,10 +5,10 @@ class Program {
   final String description;
 
   Program({
-    required this.programId,
-    required this.name,
-    required this.requiredCourses,
-    required this.description,
+    this.programId = 1,
+    this.name = "Computer Sceince",
+    this.requiredCourses = "CSCI305",
+    this.description = "DataBase System",
   });
 
   Map<String, dynamic> toMap() {

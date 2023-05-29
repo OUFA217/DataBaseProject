@@ -1,8 +1,8 @@
-import 'package:studentsystem/Student%20Model/SudentModel.dart';
-
 abstract class SuperStudentState {}
 
 class InitialStudentState extends SuperStudentState {}
+
+class CreatingStudentStateSuccess extends SuperStudentState {}
 
 class InsertingStudentState extends SuperStudentState {}
 
@@ -18,24 +18,28 @@ class StudentDeletedState extends SuperStudentState {}
 
 class LoadingStudentsState extends SuperStudentState {}
 
-class StudentsLoadedState extends SuperStudentState {
-  StudentsLoadedState({required List<Student> students});
-}
+class StudentsLoadedState extends SuperStudentState {}
+
+class Clearr extends SuperStudentState {}
 
 class LoadingStudentByIdState extends SuperStudentState {}
 
-class StudentLoadedByIdState extends SuperStudentState {
-  final Student student;
+class StudentLoadedByIdState extends SuperStudentState {}
 
-  StudentLoadedByIdState({required this.student});
+class SearchingStudentsState extends SuperStudentState {}
+
+class StudentsSearchedState extends SuperStudentState {}
+
+class StudentsSearchedStateError extends SuperStudentState {
+  final String error;
+
+  StudentsSearchedStateError(this.error);
 }
 
-class SearchingStudentsState extends SuperStudentState {
-  final String query;
+class AllRecordsDeletedState extends SuperStudentState {}
 
-  SearchingStudentsState({required this.query});
-}
+class AllRecordsDeletedStateError extends SuperStudentState {
+  final String error;
 
-class StudentsSearchedState extends SuperStudentState {
-  StudentsSearchedState({required List<Student> students});
+  AllRecordsDeletedStateError(this.error);
 }

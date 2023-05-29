@@ -7,12 +7,12 @@ class Professor {
   final String phoneNumber;
 
   Professor({
-    required this.professorId,
-    required this.firstName,
-    required this.lastName,
-    required this.department,
-    required this.email,
-    required this.phoneNumber,
+    this.professorId = 1,
+    this.firstName = "Osama",
+    this.lastName = "Aziz",
+    this.department = "Computer Science",
+    this.email = "Osama@nu.edu.eg",
+    this.phoneNumber = "01000000",
   });
 
   Map<String, dynamic> toMap() {

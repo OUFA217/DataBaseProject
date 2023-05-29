@@ -1,15 +1,13 @@
 class Student {
-  final int id;
-  final String firstName;
-  final String lastName;
-  final String phoneNumber;
-  final String email;
-  final String dateOfBirth;
-  final int programId;
-  final int paymentId;
+  String firstName;
+  String lastName;
+  String phoneNumber;
+  String email;
+  String dateOfBirth;
+  int programId;
+  int paymentId;
 
   Student({
-    required this.id,
     required this.firstName,
     required this.lastName,
     required this.phoneNumber,
@@ -21,7 +19,6 @@ class Student {
 
   Map<String, dynamic> toMap() {
     return {
-      'Student_Id': id,
       'First_Name': firstName,
       'Last_Name': lastName,
       'Phone_Number': phoneNumber,
@@ -34,7 +31,6 @@ class Student {
 
   factory Student.fromMap(Map<String, dynamic> map) {
     return Student(
-      id: map['Student_Id'],
       firstName: map['First_Name'],
       lastName: map['Last_Name'],
       phoneNumber: map['Phone_Number'],

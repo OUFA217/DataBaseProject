@@ -4,9 +4,9 @@ class Course {
   final String department;
 
   Course({
-    required this.courseName,
-    required this.courseId,
-    required this.department,
+    this.courseName = "CSCI305",
+    this.courseId = 1,
+    this.department = "Computer Science",
   });
 
   Map<String, dynamic> toMap() {

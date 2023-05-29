@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:studentsystem/General%20Components/Components.dart';
-import 'package:studentsystem/pages/SignIn.dart';
+import 'package:studentsystem/Presentation/Sign%20In/SignIn.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -34,7 +34,8 @@ class _SplashState extends State<Splash> {
               decoration: const BoxDecoration(
                   image: DecorationImage(
                       alignment: Alignment.topCenter,
-                      image: AssetImage("assets/Nile_University_logo.png"))),
+                      image:
+                          AssetImage("assets/img/Nile_University_logo.png"))),
             ),
           ],
         ),

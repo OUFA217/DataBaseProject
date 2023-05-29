@@ -9,14 +9,14 @@ class Class {
   final int professorId;
 
   Class({
-    required this.classId,
-    required this.courseId,
-    required this.professorName,
-    required this.startTime,
-    required this.endTime,
-    required this.dayOfWeek,
-    required this.programId,
-    required this.professorId,
+    this.classId = 1,
+    this.courseId = "1",
+    this.professorName = "Osama Aziz",
+    this.startTime = "8:30",
+    this.endTime = "10:30",
+    this.dayOfWeek = "Wedenesday",
+    this.programId = 1,
+    this.professorId = 1,
   });
 
   Map<String, dynamic> toMap() {
